@@ -19,14 +19,18 @@
 ## 苦戦した点
 
   - ハイフンを揃えることができいませんでした。また挑戦したいと思います。
+  - チェックボックスの値を取るのに面倒くさかった、そして、なかなかデータベース上綺麗にできませんでした。
 
 ## 参考にした web サイトなど
 
   - mb_convert_kana 全角、半角をそろう関数
   https://www.php.net/manual/ja/function.mb-convert-kana.php
 
-  -郵便番号のハイフン問題
+  - 郵便番号のハイフン問題
   https://ex1.m-yabe.com/archives/4103
   
-  -郵便番号自動入力ライブラリー
+  - 郵便番号自動入力ライブラリー
   https://www.id-frontier.jp/blog/tech/web%E3%83%9A%E3%83%BC%E3%82%B8%E3%81%A7%E9%83%B5%E4%BE%BF%E7%95%AA%E5%8F%B7%E3%81%8B%E3%82%89%E4%BD%8F%E6%89%80%E3%82%92%E8%87%AA%E5%8B%95%E5%85%A5%E5%8A%9B%E3%81%99%E3%82%8B%E3%83%A9%E3%82%A4/
+
+  - php チェックボックスの値をmysqlに登録する方法
+  https://ja.stackoverflow.com/questions/48457/php-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E5%80%A4%E3%82%92mysql%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
