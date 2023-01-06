@@ -34,3 +34,6 @@
 
   - php チェックボックスの値をmysqlに登録する方法
   https://ja.stackoverflow.com/questions/48457/php-%E3%83%81%E3%82%A7%E3%83%83%E3%82%AF%E3%83%9C%E3%83%83%E3%82%AF%E3%82%B9%E3%81%AE%E5%80%A4%E3%82%92mysql%E3%81%AB%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B%E6%96%B9%E6%B3%95
+
+  - SQLからJSON出力方法
+    https://laraweb.net/surrounding/10550/
