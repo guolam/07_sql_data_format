@@ -4,6 +4,7 @@
  tr,
  th,
  #myChart,
+ #myChart2,
  #q_p1,
  #q_p2,
  .yama,
@@ -23,6 +24,20 @@
  }
 
  input[type="radio"]:checked+label {
+     background: #239ba1;
+     /* マウス選択時の背景色を指定する */
+     color: #ffffff;
+     /* マウス選択時のフォント色を指定する */
+ }
+
+
+
+ input[type=checkbox] {
+     display: none;
+     /* ラジオボタンを非表示にする */
+ }
+
+ input[type="checkbox"]:checked+label {
      background: #239ba1;
      /* マウス選択時の背景色を指定する */
      color: #ffffff;
@@ -62,6 +77,8 @@
      border-radius: 5px;
      /* 角丸を指定する */
  }
+
+
 
  .yama {
      height: 100px;
@@ -169,4 +186,18 @@
          opacity: 1;
          right: 25px;
      }
+ }
+
+ .line_space {
+     line-height: 250%;
+ }
+
+ input {
+     width: 20%
+ }
+
+
+ .check {
+     line-height: 100%;
+     font-size: small;
  }
