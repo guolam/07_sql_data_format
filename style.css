@@ -1,0 +1,172 @@
+ html,
+ body,
+ fieldset,
+ tr,
+ th,
+ #myChart,
+ #q_p1,
+ #q_p2,
+ .yama,
+ .canvas-container,
+ .botton {
+     min-height: 100%;
+     width: 900px;
+     margin: auto;
+     justify-content: center;
+ }
+
+
+
+ input[type=radio] {
+     display: none;
+     /* ラジオボタンを非表示にする */
+ }
+
+ input[type="radio"]:checked+label {
+     background: #239ba1;
+     /* マウス選択時の背景色を指定する */
+     color: #ffffff;
+     /* マウス選択時のフォント色を指定する */
+ }
+
+ .label:hover {
+     background-color: #c3eaef;
+     /* マウスオーバー時の背景色を指定する */
+ }
+
+ .label {
+     display: block;
+     /* ブロックレベル要素化する */
+     float: left;
+     /* 要素の左寄せ・回り込を指定する */
+     margin: 8px;
+     /* ボックス外側の余白を指定する */
+     width: 150px;
+     /* ボックスの横幅を指定する */
+     height: 80px;
+     /* ボックスの高さを指定する */
+     padding-left: 5px;
+     /* ボックス内左側の余白を指定する */
+     padding-right: 5px;
+     /* ボックス内御右側の余白を指定する */
+     color: #000000;
+     /* フォントの色を指定 */
+     text-align: center;
+     /* テキストのセンタリングを指定する */
+     line-height: 75px;
+     /* 行の高さを指定する */
+     cursor: pointer;
+     /* マウスカーソルの形（リンクカーソル）を指定する */
+     border: 2px solid #239ba1;
+     /* ボックスの境界線を実線で指定する */
+     border-radius: 5px;
+     /* 角丸を指定する */
+ }
+
+ .yama {
+     height: 100px;
+     line-height: 30px;
+ }
+
+ .canvas-container {
+     position: relative;
+     width: calc(100%);
+     height: 500px;
+     overflow: hidden;
+     margin: 20px;
+
+ }
+
+ canvas {
+     justify-content: center;
+ }
+
+
+ /* botton */
+ .botton {
+     margin-top: 80px;
+     margin-bottom: 80px;
+     /* display: block; */
+     display: flex;
+ }
+
+ /* 動くボタン */
+
+ .arrow_animation_button {
+     display: inline-block;
+     position: relative;
+     padding: 10px 50px 10px 50px;
+     /* 左右に矢印を置くためのスペースを空ける */
+     background: #00ABB3;
+     color: #fff;
+     border-radius: 10px;
+ }
+
+ .arrow_animation_button:hover {
+     /* マウスオーバー時のスタイル */
+     background-image: linear-gradient(45deg, #2084cc 50%, #00ABB3 100%);
+     transform: rotate(-5deg);
+ }
+
+ .arrow_animation_button::before {
+     /* 矢印の表示設定 */
+     content: "";
+     position: absolute;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+     left: 15px;
+     width: 13px;
+     height: 13px;
+     border-top: 2px solid #fff;
+     border-right: 2px solid #fff;
+     transform: rotate(45deg);
+     animation: slideBlink 1s linear infinite;
+     /* アニメーションの初期設定 */
+ }
+
+ @keyframes slideBlink {
+
+     /* アニメーションの内容 */
+     from {
+         /* アニメーション開始時のスタイル */
+         opacity: 0;
+         left: 8px;
+     }
+
+     to {
+         /* アニメーション終了時のスタイル */
+         opacity: 1;
+         left: 25px;
+     }
+ }
+
+ .arrow_animation_button::after {
+     /* 右側の矢印の表示設定 */
+     content: "";
+     position: absolute;
+     margin: auto;
+     top: 0;
+     bottom: 0;
+     right: 15px;
+     width: 13px;
+     height: 13px;
+     border-top: 2px solid #fff;
+     border-right: 2px solid #fff;
+     transform: rotate(225deg);
+     animation: rightSlideBlink 1s linear infinite;
+ }
+
+ @keyframes rightSlideBlink {
+
+     /* 右側のアニメーションの内容 */
+     from {
+         opacity: 0;
+         right: 8px;
+     }
+
+     to {
+         opacity: 1;
+         right: 25px;
+     }
+ }

@@ -15,7 +15,7 @@ try {
 
 
 // SQL作成&実行
-$sql = "SELECT namae, tel, email, post_code, jyusho FROM work7 ORDER BY post_code ASC";
+$sql = "SELECT namae, sexuality, tel, email, post_code, jyusho, reason FROM work7 ORDER BY post_code ASC";
 $stmt = $pdo->prepare($sql);
 
 //失敗すると "sql error"が出力される
@@ -44,8 +44,10 @@ foreach ($result as $record) {
   <td>{$record["post_code"]}</td>
   <td>{$record["jyusho"]}</td>
   <td>{$record["namae"]}</td>
+  <td>{$record["sexuality"]}</td>
   <td>{$record["email"]}</td>
   <td>{$record["tel"]}</td>
+  <td>{$record["reason"]}</td>
   </tr>";
 }
 
@@ -57,21 +59,23 @@ foreach ($result as $record) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DB連携型todoリスト（一覧画面）</title>
+  <title>データ一覧</title>
 </head>
 
 <body>
   <fieldset>
     <legend>データ一覧</legend>
-    <a href="todo_input.php">入力画面</a>
+    <a href="questionnaire_input_answer.php">入力画面</a>
     <table>
       <thead>
         <tr>
           <th>post code</th>
           <th>address</th>
           <th>name</th>
+          <th>sexuality</th>
           <th>email</th>
           <th>tel</th>
+          <th>reason</th>
         </tr>
       </thead>
       <tbody>
